@@ -223,3 +223,8 @@ header > h4{
     border-bottom: 1px solid rgb(222, 179, 232);
   }
 
+.avatar-pic {
+  width: 150px;
+  height: 150px;
+}
+

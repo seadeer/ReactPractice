@@ -6,16 +6,16 @@ var Notes = require('./Notes/Notes');
 var ReactFireMixin = require('reactFire');
 var Firebase = require('firebase');
 var config = require('../config/fireconfig');
+var helpers = require('../utils/helpers');
 
 var Profile = React.createClass({
     mixins: [ReactFireMixin],
     getInitialState: function(){
         return{
-            notes: [1,2,3],
+            notes: [],
             bio:{
-                name: 'TylerMcGinnis'
             },
-            repos: ['a', 'b', 'c']
+            repos: []
         }
     },
     componentWillMount: function(){
@@ -23,9 +23,31 @@ var Profile = React.createClass({
         this.ref = Firebase.database().ref('usernames');
         var childRef = this.ref.child(this.props.params.username);
         this.bindAsArray(childRef, 'notes');
+        helpers.getGithubInfo(this.props.params.username)
+        .then(function(data){
+            this.setState({
+                bio: data.bio,
+                repos: data.repos
+            })
+        }.bind(this))
     },
     componentWillUnmount: function(){
         this.unbind('notes');
+    },
+    init: function(username){
+        var childRef = this.ref.child(username);
+        this.bindAsArray(childRef, 'notes');
+    },
+    componentWillReceiveProps:function(nextProps){
+        this.unbind('notes');
+        this.init(nextProps.params.username);
+        helpers.getGithubInfo(nextProps.params.username)
+        .then(function(data){
+            this.setState({
+                bio: data.bio,
+                repos: data.repos
+            })
+        }.bind(this))
     },
     handleAddNote: function(input){
         //update Firebase
