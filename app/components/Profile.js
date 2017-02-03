@@ -7,6 +7,7 @@ var ReactFireMixin = require('reactFire');
 var Firebase = require('firebase');
 var config = require('../config/fireconfig');
 var helpers = require('../utils/helpers');
+var Recent = require('./Recent');
 
 var Profile = React.createClass({
     mixins: [ReactFireMixin],
@@ -15,20 +16,15 @@ var Profile = React.createClass({
             notes: [],
             bio:{
             },
-            repos: []
+            repos: [],
+            users: [],
         }
     },
     componentWillMount: function(){
         Firebase.initializeApp(config);
         this.ref = Firebase.database().ref('usernames');
         this.init(this.props.params.username)
-        helpers.getGithubInfo(this.props.params.username)
-        .then(function(data){
-            this.setState({
-                bio: data.bio,
-                repos: data.repos
-            })
-        }.bind(this))
+        
     },
     componentWillUnmount: function(){
         this.unbind('notes');
@@ -36,17 +32,27 @@ var Profile = React.createClass({
     init: function(username){
         var childRef = this.ref.child(username);
         this.bindAsArray(childRef, 'notes');
-    },
-    componentWillReceiveProps:function(nextProps){
-        this.unbind('notes');
-        this.init(nextProps.params.username);
-        helpers.getGithubInfo(nextProps.params.username)
+        helpers.getGithubInfo(username)
         .then(function(data){
             this.setState({
                 bio: data.bio,
                 repos: data.repos
             })
+        }.bind(this));
+        this.ref.limitToLast(10).on('value', function(dataSnapshot){
+            var items = [];
+            dataSnapshot.forEach(function(item){
+                items.push(item.key);
+            }.bind(this));
+
+            this.setState({
+                users: items
+            })
         }.bind(this))
+    },
+    componentWillReceiveProps:function(nextProps){
+        this.unbind('notes');
+        this.init(nextProps.params.username);
     },
     handleAddNote: function(input){
         //update Firebase
@@ -61,6 +67,7 @@ var Profile = React.createClass({
                     notes={this.state.notes}
                     username={this.props.params.username}
                     addNote = {this.handleAddNote}/>
+                <Recent users={this.state.users}/>
                 <Repos repos={this.state.repos} username={this.props.params.username}/>
             </div>
     )

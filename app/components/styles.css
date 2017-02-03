@@ -238,7 +238,7 @@ header > h4{
 
 #profile-display{
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .card-textfield{
