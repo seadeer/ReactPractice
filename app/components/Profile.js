@@ -56,7 +56,7 @@ var Profile = React.createClass({
     render: function(){
         console.log(this.ref.key, this.state.notes)
         return(
-            <div className="mdl-grid">
+            <div className="mdl-grid" id="profile-display">
                 <UserProfile username={this.props.params.username} bio={this.state.bio} />
                 <Repos repos={this.state.repos} username={this.props.params.username}/>
                 <Notes 

@@ -27247,7 +27247,7 @@
 
 
 	// module
-	exports.push([module.id, "/**\n * Copyright 2015 Google Inc. All Rights Reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *      http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */\n\nhtml, body {\n  font-family: 'Roboto', 'Helvetica', sans-serif;\n  margin: 0;\n  padding: 0;\n}\n.mdl-demo .mdl-layout__header-row {\n  padding-left: 40px;\n  justify-content: space-between;\n}\n.mdl-demo .mdl-layout.is-small-screen .mdl-layout__header-row h3 {\n  font-size: inherit;\n}\n.mdl-demo .mdl-layout__tab-bar-button {\n  display: none;\n}\n.mdl-demo .mdl-layout.is-small-screen .mdl-layout__tab-bar .mdl-button {\n  display: none;\n}\n.mdl-demo .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar,\n.mdl-demo .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar-container {\n  overflow: visible;\n}\n.mdl-demo .mdl-layout__tab-bar-container {\n  height: 64px;\n}\n.mdl-demo .mdl-layout__tab-bar {\n  padding: 0;\n  padding-left: 16px;\n  box-sizing: border-box;\n  height: 100%;\n  width: 100%;\n}\n.mdl-demo .mdl-layout__tab-bar .mdl-layout__tab {\n  height: 64px;\n  line-height: 64px;\n}\n.mdl-demo .mdl-layout__tab-bar .mdl-layout__tab.is-active::after {\n  background-color: white;\n  height: 4px;\n}\n.mdl-demo main > .mdl-layout__tab-panel {\n  padding: 8px;\n  padding-top: 48px;\n}\n.mdl-demo .mdl-card {\n  height: auto;\n  display: flex;\n  flex-direction: column;\n}\n.mdl-demo .mdl-card > * {\n  height: auto;\n}\n.mdl-demo .mdl-card .mdl-card__supporting-text {\n  margin: 40px;\n  flex-grow: 1;\n  padding: 0;\n  color: inherit;\n  width: calc(100% - 80px);\n}\n.mdl-demo.mdl-demo .mdl-card__supporting-text h4 {\n  margin-top: 0;\n  margin-bottom: 20px;\n}\n.mdl-demo .mdl-card__actions {\n  margin: 0;\n  padding: 4px 40px;\n  color: inherit;\n}\n.mdl-demo .mdl-card__actions a {\n  color: #00BCD4;\n  margin: 0;\n}\n.mdl-demo .mdl-card__actions a:hover,\n.mdl-demo .mdl-card__actions a:active {\n  color: inherit;\n  background-color: transparent;\n}\n.mdl-demo .mdl-card__supporting-text + .mdl-card__actions {\n  border-top: 1px solid rgba(0, 0, 0, 0.12);\n}\n.mdl-demo #add {\n  position: absolute;\n  right: 40px;\n  top: 36px;\n  z-index: 999;\n}\n\n.mdl-demo .mdl-layout__content section:not(:last-of-type) {\n  position: relative;\n  margin-bottom: 48px;\n}\n.mdl-demo section.section--center {\n  max-width: 860px;\n}\n.mdl-demo #features section.section--center {\n  max-width: 620px;\n}\n.mdl-demo section > header{\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.mdl-demo section > .section__play-btn {\n  min-height: 200px;\n}\n.mdl-demo section > header > .material-icons {\n  font-size: 3rem;\n}\n.mdl-demo section > button {\n  position: absolute;\n  z-index: 99;\n  top: 8px;\n  right: 8px;\n}\n.mdl-demo section .section__circle {\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n  flex-grow: 0;\n  flex-shrink: 1;\n}\n.mdl-demo section .section__text {\n  flex-grow: 1;\n  flex-shrink: 0;\n  padding-top: 8px;\n}\n.mdl-demo section .section__text h5 {\n  font-size: inherit;\n  margin: 0;\n  margin-bottom: 0.5em;\n}\n.mdl-demo section .section__text a {\n  text-decoration: none;\n}\n.mdl-demo section .section__circle-container > .section__circle-container__circle {\n  width: 64px;\n  height: 64px;\n  border-radius: 32px;\n  margin: 8px 0;\n}\n.mdl-demo section.section--footer .section__circle--big {\n  width: 100px;\n  height: 100px;\n  border-radius: 50px;\n  margin: 8px 32px;\n}\n.mdl-demo .is-small-screen section.section--footer .section__circle--big {\n  width: 50px;\n  height: 50px;\n  border-radius: 25px;\n  margin: 8px 16px;\n}\n.mdl-demo section.section--footer {\n  padding: 64px 0;\n  margin: 0 -8px -8px -8px;\n}\n.mdl-demo section.section--center .section__text:not(:last-child) {\n  border-bottom: 1px solid rgba(0,0,0,.13);\n}\n.mdl-demo .mdl-card .mdl-card__supporting-text > h3:first-child {\n  margin-bottom: 24px;\n}\n.mdl-demo .mdl-layout__tab-panel:not(#overview) {\n  background-color: white;\n}\n.mdl-demo #features section {\n  margin-bottom: 72px;\n}\n.mdl-demo #features h4, #features h5 {\n  margin-bottom: 16px;\n}\n.mdl-demo .toc {\n  border-left: 4px solid #C1EEF4;\n  margin: 24px;\n  padding: 0;\n  padding-left: 8px;\n  display: flex;\n  flex-direction: column;\n}\n.mdl-demo .toc h4 {\n  font-size: 0.9rem;\n  margin-top: 0;\n}\n.mdl-demo .toc a {\n  color: #4DD0E1;\n  text-decoration: none;\n  font-size: 16px;\n  line-height: 28px;\n  display: block;\n}\n.mdl-demo .mdl-menu__container {\n  z-index: 99;\n}\n\nheader > h4{\n  color: rgb(222, 179, 232);\n}\n\n.search-box {\n  display: inline-block;\n}\n  .search-box i {\n    color: rgb(222, 179, 232);\n  }\n\n  #search {\n    border-bottom: 1px solid rgb(222, 179, 232);\n  }\n\n.avatar-pic {\n  width: 150px;\n  height: 150px;\n}\n\n", ""]);
+	exports.push([module.id, "/**\n * Copyright 2015 Google Inc. All Rights Reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *      http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */\n\nhtml, body {\n  font-family: 'Roboto', 'Helvetica', sans-serif;\n  margin: 0;\n  padding: 0;\n}\n.mdl-demo .mdl-layout__header-row {\n  padding-left: 40px;\n  justify-content: space-between;\n}\n.mdl-demo .mdl-layout.is-small-screen .mdl-layout__header-row h3 {\n  font-size: inherit;\n}\n.mdl-demo .mdl-layout__tab-bar-button {\n  display: none;\n}\n.mdl-demo .mdl-layout.is-small-screen .mdl-layout__tab-bar .mdl-button {\n  display: none;\n}\n.mdl-demo .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar,\n.mdl-demo .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar-container {\n  overflow: visible;\n}\n.mdl-demo .mdl-layout__tab-bar-container {\n  height: 64px;\n}\n.mdl-demo .mdl-layout__tab-bar {\n  padding: 0;\n  padding-left: 16px;\n  box-sizing: border-box;\n  height: 100%;\n  width: 100%;\n}\n.mdl-demo .mdl-layout__tab-bar .mdl-layout__tab {\n  height: 64px;\n  line-height: 64px;\n}\n.mdl-demo .mdl-layout__tab-bar .mdl-layout__tab.is-active::after {\n  background-color: white;\n  height: 4px;\n}\n.mdl-demo main > .mdl-layout__tab-panel {\n  padding: 8px;\n  padding-top: 48px;\n}\n.mdl-demo .mdl-card {\n  height: auto;\n  display: flex;\n  flex-direction: column;\n}\n.mdl-demo .mdl-card > * {\n  height: auto;\n}\n.mdl-demo .mdl-card .mdl-card__supporting-text {\n  margin: 40px;\n  flex-grow: 1;\n  padding: 0;\n  color: inherit;\n  width: calc(100% - 80px);\n}\n.mdl-demo.mdl-demo .mdl-card__supporting-text h4 {\n  margin-top: 0;\n  margin-bottom: 20px;\n}\n.mdl-demo .mdl-card__actions {\n  margin: 0;\n  padding: 4px 40px;\n  color: inherit;\n}\n.mdl-demo .mdl-card__actions a {\n  color: #00BCD4;\n  margin: 0;\n}\n.mdl-demo .mdl-card__actions a:hover,\n.mdl-demo .mdl-card__actions a:active {\n  color: inherit;\n  background-color: transparent;\n}\n.mdl-demo .mdl-card__supporting-text + .mdl-card__actions {\n  border-top: 1px solid rgba(0, 0, 0, 0.12);\n}\n.mdl-demo #add {\n  position: absolute;\n  right: 40px;\n  top: 36px;\n  z-index: 999;\n}\n\n.mdl-demo .mdl-layout__content section:not(:last-of-type) {\n  position: relative;\n  margin-bottom: 48px;\n}\n.mdl-demo section.section--center {\n  max-width: 860px;\n}\n.mdl-demo #features section.section--center {\n  max-width: 620px;\n}\n.mdl-demo section > header{\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.mdl-demo section > .section__play-btn {\n  min-height: 200px;\n}\n.mdl-demo section > header > .material-icons {\n  font-size: 3rem;\n}\n.mdl-demo section > button {\n  position: absolute;\n  z-index: 99;\n  top: 8px;\n  right: 8px;\n}\n.mdl-demo section .section__circle {\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n  flex-grow: 0;\n  flex-shrink: 1;\n}\n.mdl-demo section .section__text {\n  flex-grow: 1;\n  flex-shrink: 0;\n  padding-top: 8px;\n}\n.mdl-demo section .section__text h5 {\n  font-size: inherit;\n  margin: 0;\n  margin-bottom: 0.5em;\n}\n.mdl-demo section .section__text a {\n  text-decoration: none;\n}\n.mdl-demo section .section__circle-container > .section__circle-container__circle {\n  width: 64px;\n  height: 64px;\n  border-radius: 32px;\n  margin: 8px 0;\n}\n.mdl-demo section.section--footer .section__circle--big {\n  width: 100px;\n  height: 100px;\n  border-radius: 50px;\n  margin: 8px 32px;\n}\n.mdl-demo .is-small-screen section.section--footer .section__circle--big {\n  width: 50px;\n  height: 50px;\n  border-radius: 25px;\n  margin: 8px 16px;\n}\n.mdl-demo section.section--footer {\n  padding: 64px 0;\n  margin: 0 -8px -8px -8px;\n}\n.mdl-demo section.section--center .section__text:not(:last-child) {\n  border-bottom: 1px solid rgba(0,0,0,.13);\n}\n.mdl-demo .mdl-card .mdl-card__supporting-text > h3:first-child {\n  margin-bottom: 24px;\n}\n.mdl-demo .mdl-layout__tab-panel:not(#overview) {\n  background-color: white;\n}\n.mdl-demo #features section {\n  margin-bottom: 72px;\n}\n.mdl-demo #features h4, #features h5 {\n  margin-bottom: 16px;\n}\n.mdl-demo .toc {\n  border-left: 4px solid #C1EEF4;\n  margin: 24px;\n  padding: 0;\n  padding-left: 8px;\n  display: flex;\n  flex-direction: column;\n}\n.mdl-demo .toc h4 {\n  font-size: 0.9rem;\n  margin-top: 0;\n}\n.mdl-demo .toc a {\n  color: #4DD0E1;\n  text-decoration: none;\n  font-size: 16px;\n  line-height: 28px;\n  display: block;\n}\n.mdl-demo .mdl-menu__container {\n  z-index: 99;\n}\n\nheader > h4{\n  color: rgb(222, 179, 232);\n}\n\n.search-box {\n  display: inline-block;\n}\n  .search-box i {\n    color: rgb(222, 179, 232);\n  }\n\n  #search {\n    border-bottom: 1px solid rgb(222, 179, 232);\n  }\n\n.avatar-pic {\n  width: 150px;\n  height: 150px;\n}\n\n#profile-display{\n  align-items: flex-start;\n}", ""]);
 
 	// exports
 
@@ -27707,7 +27707,7 @@
 	        console.log(this.ref.key, this.state.notes);
 	        return React.createElement(
 	            'div',
-	            { className: 'mdl-grid' },
+	            { className: 'mdl-grid', id: 'profile-display' },
 	            React.createElement(UserProfile, { username: this.props.params.username, bio: this.state.bio }),
 	            React.createElement(Repos, { repos: this.state.repos, username: this.props.params.username }),
 	            React.createElement(Notes, {
@@ -27736,6 +27736,21 @@
 	        repos: React.PropTypes.array.isRequired
 	    },
 	    render: function render() {
+	        var langs = getLanguages(this.props.repos);
+	        console.log(langs);
+	        var languages = Object.keys(langs).map(function (key) {
+	            return React.createElement(
+	                "li",
+	                { className: "mdl-list__item", key: key },
+	                React.createElement(
+	                    "span",
+	                    { className: "mdl-list__item-primary-content" },
+	                    key,
+	                    ": ",
+	                    langs[key]
+	                )
+	            );
+	        });
 	        var repos = this.props.repos.map(function (repo, index) {
 	            var description = "No description";
 	            if (repo.description) {
@@ -27779,12 +27794,37 @@
 	                React.createElement(
 	                    "ul",
 	                    { className: "mdl-list" },
+	                    languages
+	                ),
+	                React.createElement(
+	                    "ul",
+	                    { className: "mdl-list" },
 	                    repos
 	                )
 	            )
 	        );
 	    }
 	});
+
+	function getLanguages(repos) {
+	    var langs = {};
+	    for (var i = 0; i < repos.length; i++) {
+	        if (repos[i].language in langs) {
+	            if (repos[i].language == null) {
+	                langs['Unspecified language']++;
+	            } else {
+	                langs[repos[i].language]++;
+	            }
+	        } else {
+	            if (repos[i].language == null) {
+	                langs['Unspecified language'] = 1;
+	            } else {
+	                langs[repos[i].language] = 1;
+	            }
+	        }
+	    }
+	    return langs;
+	}
 
 	module.exports = Repos;
 
@@ -29100,19 +29140,65 @@
 
 	var axios = __webpack_require__(264);
 
+	/* get a list of repositories from Github*/
 	function getRepos(username) {
-	    return axios.get('https://api.github.com/users/' + username + '/repos');
+	    return axios.get('https://api.github.com/users/' + username + '/repos').then(function (response) {
+	        if (!response.headers.link) {
+	            return response.data;
+	        } else {
+	            var data = response.data;
+	            var rels = getRels(response.headers.link);
+	            var calls = makeCalls(username, rels.total);
+	            return axios.all(calls).then(function (arr) {
+	                for (var i = 0; i < arr.length; i++) {
+	                    data = data.concat(arr[i].data);
+	                    console.log("DATA:", data);
+	                }
+	                return data;
+	            });
+	        }
+	    });;
 	};
 
+	/* get user profile info from Github */
 	function getUserInfo(username) {
 	    return axios.get('https://api.github.com/users/' + username);
 	}
 
+	/* Get links to page through responses from Github API */
+	function getRels(header) {
+	    var relsArr = {};
+	    var temp = header.split(', ');
+	    var regex = /page=([0-9]+)/;
+	    var linkRegex = /\<([\S]+)\>/;
+	    relsArr['nextLink'] = linkRegex.exec(temp[0].split('; ')[0])[1];
+	    relsArr['last'] = temp[1].split('; ')[0];
+	    relsArr['total'] = parseInt(regex.exec(temp[1].split('; ')[0])[1]);
+	    var foundLast = temp[1].split('; ')[1].indexOf("prev");
+	    if (foundLast == -1) {
+	        relsArr['isLast'] = false;
+	    } else {
+	        relsArr['isLast'] = true;
+	    }
+	    return relsArr;
+	}
+
+	/* request all pages of data from Github API */
+	function makeCalls(username, total) {
+	    var calls = [];
+	    for (var i = 2; i <= total; i++) {
+	        calls.push(axios.get('https://api.github.com/users/' + username + '/repos?page=' + i.toString()));
+	    }
+	    return calls;
+	}
+
+	/* bundle together all requests and return data */
 	var helpers = {
 	    getGithubInfo: function getGithubInfo(username) {
 	        return axios.all([getRepos(username), getUserInfo(username)]).then(function (arr) {
+	            console.log("DATA:", arr[0]);
 	            return {
-	                repos: arr[0].data,
+	                repos: arr[0],
 	                bio: arr[1].data
 	            };
 	        });

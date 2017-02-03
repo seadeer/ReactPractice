@@ -228,3 +228,6 @@ header > h4{
   height: 150px;
 }
 
+#profile-display{
+  align-items: flex-start;
+}
