@@ -14,6 +14,7 @@ var UserProfile = React.createClass({
                     <ul className="mdl-list">
                     {this.props.bio.avatar_url && <li><img className="avatar-pic" src={this.props.bio.avatar_url}/></li>}
                     {this.props.bio.name && <li>Name: {this.props.bio.name}</li>}
+                    {this.props.bio.bio && <li>About: {this.props.bio.bio}</li>}
                     {this.props.bio.location && <li>Location: {this.props.bio.location}</li>}
                     {this.props.bio.company && <li>Company: {this.props.bio.company}</li>}
                     {this.props.bio.followers && <li>Followers: {this.props.bio.followers}</li>}

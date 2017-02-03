@@ -61,7 +61,7 @@ html, body {
 .mdl-demo .mdl-card {
   height: auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 .mdl-demo .mdl-card > * {
   height: auto;
@@ -219,6 +219,14 @@ header > h4{
     color: rgb(222, 179, 232);
   }
 
+  .search-box.text-box {
+    width: 70%;
+  }
+
+  .search-box.button-box{
+    width: 30%;
+  }
+
   #search {
     border-bottom: 1px solid rgb(222, 179, 232);
   }
@@ -230,4 +238,20 @@ header > h4{
 
 #profile-display{
   align-items: flex-start;
+  justify-content: space-around;
+}
+
+.card-textfield{
+  width: 90%;
+  margin: 0 15px 5px 0;
+}
+
+.note{
+  margin: 0 5px 5px 0;
+}
+
+.compact-list > li{
+  min-height: 10px;
+  padding: 5px;
+  font-size: 13px;
 }

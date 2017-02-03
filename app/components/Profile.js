@@ -21,8 +21,7 @@ var Profile = React.createClass({
     componentWillMount: function(){
         Firebase.initializeApp(config);
         this.ref = Firebase.database().ref('usernames');
-        var childRef = this.ref.child(this.props.params.username);
-        this.bindAsArray(childRef, 'notes');
+        this.init(this.props.params.username)
         helpers.getGithubInfo(this.props.params.username)
         .then(function(data){
             this.setState({
@@ -58,11 +57,11 @@ var Profile = React.createClass({
         return(
             <div className="mdl-grid" id="profile-display">
                 <UserProfile username={this.props.params.username} bio={this.state.bio} />
-                <Repos repos={this.state.repos} username={this.props.params.username}/>
                 <Notes 
                     notes={this.state.notes}
                     username={this.props.params.username}
                     addNote = {this.handleAddNote}/>
+                <Repos repos={this.state.repos} username={this.props.params.username}/>
             </div>
     )
     }

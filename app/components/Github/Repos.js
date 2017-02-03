@@ -23,11 +23,11 @@ var Repos = React.createClass({
                 description = repo.description
             }
             return(
-                <li className="mdl-list__item--three-line" key={index}>
-                    <span className="mdl-list__item-primary-content">
+                <li className="" key={index}>
+                    <span className="">
                     {repo.html_url && <span><a href={repo.html_url}>{repo.name}
                     </a></span>}
-                    <p className="mdl-list__item-text-body">{description}</p>
+                    <p className="">{description}</p>
                     </span>
                 </li>
             )
@@ -36,7 +36,7 @@ var Repos = React.createClass({
             <div className="mdl-cell mdl-card mdl-cell--4-col mdl-shadow--2dp">
                 <div className="mdl-card__supporting-text">
                     <h4>{repos.length} Repos</h4>
-                    <ul className="mdl-list">
+                    <ul className="mdl-list compact-list">
                         {languages}
                     </ul>
                     <ul className="mdl-list">

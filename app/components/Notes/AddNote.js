@@ -15,11 +15,15 @@ var AddNote = React.createClass({
     },
     render: function(){
         return(
-            <div className="">
-                <div className="mdl-textfield mdl-js-textfield">
+            <div>
+            <div className="search-box text-box">
+                <div className="mdl-textfield mdl-js-textfield card-textfield">
                 <input type="text" className="mdl-textfield__input" placeholder="Add note" ref={this.setRef}/>
                 </div>
-                <button className="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect" type="button" onClick={this.handleSubmit}>Submit</button>
+            </div>
+            <div className="search-box button-box">
+                <button className="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored mdl-js-ripple-effect" type="button" onClick={this.handleSubmit}><i className="material-icons">add</i></button>
+            </div>
             </div>
         )
     }
